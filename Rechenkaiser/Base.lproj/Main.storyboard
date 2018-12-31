@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rechenkaiser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice1" translatesAutoresizingMaskIntoConstraints="NO" id="Ye6-IW-bwA">
+                                <rect key="frame" x="17" y="236" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="9Hf-8I-mgH"/>
+                                    <constraint firstAttribute="width" constant="80" id="shq-yj-cHu"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dice6" translatesAutoresizingMaskIntoConstraints="NO" id="U00-KM-iiK">
+                                <rect key="frame" x="117" y="236" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Ekf-5y-qhR"/>
+                                    <constraint firstAttribute="width" constant="80" id="XLE-K5-lNX"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="largeBanner" translatesAutoresizingMaskIntoConstraints="NO" id="2H8-6m-PvL">
+                                <rect key="frame" x="16" y="65" width="343" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="136" id="9zY-ra-hqw"/>
+                                    <constraint firstAttribute="width" constant="343" id="ZQp-zX-7qB"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="25" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rHD-05-OkS">
+                                <rect key="frame" x="17" y="335" width="110" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="0bw-Kb-xoT"/>
+                                    <constraint firstAttribute="width" constant="110" id="nv1-CP-aID"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miV-i5-DlF">
+                                <rect key="frame" x="137" y="328" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="1cR-Hl-WnM"/>
+                                    <constraint firstAttribute="width" constant="60" id="Svf-7z-Rob"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <state key="normal" title="✅"/>
+                                <connections>
+                                    <action selector="confirmButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wQZ-33-Sj2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88513809442520142" green="0.42010343074798584" blue="0.23255288600921631" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="rHD-05-OkS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="A2Y-Xe-cSB"/>
+                            <constraint firstItem="U00-KM-iiK" firstAttribute="leading" secondItem="Ye6-IW-bwA" secondAttribute="trailing" constant="20" id="FZz-LA-pQr"/>
+                            <constraint firstItem="U00-KM-iiK" firstAttribute="width" secondItem="Ye6-IW-bwA" secondAttribute="width" id="J6J-vN-iIR"/>
+                            <constraint firstItem="rHD-05-OkS" firstAttribute="top" secondItem="Ye6-IW-bwA" secondAttribute="bottom" constant="19" id="JsA-Bd-nTY"/>
+                            <constraint firstItem="miV-i5-DlF" firstAttribute="leading" secondItem="rHD-05-OkS" secondAttribute="trailing" constant="10" id="QSy-9u-4BR"/>
+                            <constraint firstItem="Ye6-IW-bwA" firstAttribute="top" secondItem="2H8-6m-PvL" secondAttribute="bottom" constant="35" id="aEw-Wl-a40"/>
+                            <constraint firstItem="Ye6-IW-bwA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="c3h-k3-TUS"/>
+                            <constraint firstItem="2H8-6m-PvL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="giM-mk-0qZ"/>
+                            <constraint firstItem="2H8-6m-PvL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="keK-GI-Eb5"/>
+                            <constraint firstItem="miV-i5-DlF" firstAttribute="top" secondItem="U00-KM-iiK" secondAttribute="bottom" constant="12" id="y5L-iv-cLP"/>
+                            <constraint firstItem="U00-KM-iiK" firstAttribute="height" secondItem="Ye6-IW-bwA" secondAttribute="height" id="ySC-lJ-xv4"/>
+                            <constraint firstItem="U00-KM-iiK" firstAttribute="top" secondItem="2H8-6m-PvL" secondAttribute="bottom" constant="35" id="z4E-0N-uh4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerTextfield" destination="rHD-05-OkS" id="kEj-Yj-Hag"/>
+                        <outlet property="diceImageLeft" destination="Ye6-IW-bwA" id="nFd-ns-xWh"/>
+                        <outlet property="diceImageRight" destination="U00-KM-iiK" id="cEA-vN-QmS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dice1" width="100" height="100"/>
+        <image name="dice6" width="100" height="100"/>
+        <image name="largeBanner" width="262.5" height="105"/>
+    </resources>
+</document>
