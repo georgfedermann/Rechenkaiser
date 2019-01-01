@@ -86,10 +86,12 @@ class ViewController: UIViewController {
     // lvl 1-4 number range is 6, 7, 8, 9 respectively
     // lvl 5-8 number range is 7, 7, 8, 9 respectively
     func createChallenge(){
-        print("Creating a challenge for level \(currentLevel) in the range of \(1...(5+currentLevel)).");
+        // define the range of numbers from which summands in this level can be taken.
+        let validRangeForLevel:ClosedRange<Int> = 1...(6+(currentLevel-1)%4);
+        print("Creating a challenge for level \(currentLevel) in the range of \(validRangeForLevel).");
         challengeFace = currentLevel < 5 ? .dice : .number;
-        summand1 = Int.random(in:1...(6+currentLevel%4));
-        summand2 = Int.random(in:1...(6+currentLevel%4));
+        summand1 = Int.random(in:validRangeForLevel);
+        summand2 = Int.random(in:validRangeForLevel);
         sum = summand1 + summand2;
     }
     
