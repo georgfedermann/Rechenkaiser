@@ -1,2 +1,15 @@
+## Build generated
+build/
+DerivedData/
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Various settings
 xcuserdata
+
 .DS_Store
+
