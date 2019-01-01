@@ -50,7 +50,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miV-i5-DlF">
-                                <rect key="frame" x="137" y="328" width="60" height="60"/>
+                                <rect key="frame" x="137" y="415" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="1cR-Hl-WnM"/>
                                     <constraint firstAttribute="width" constant="60" id="Svf-7z-Rob"/>
@@ -69,10 +69,10 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6M-zN-W2f">
-                                <rect key="frame" x="17" y="401" width="171" height="52"/>
+                                <rect key="frame" x="17" y="488" width="102" height="52"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="Ntn-je-Dxw"/>
                                     <constraint firstAttribute="height" constant="52" id="rl5-fz-Pu0"/>
-                                    <constraint firstAttribute="width" constant="171" id="tGl-J6-Gdp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="34"/>
                                 <color key="textColor" red="0.96033066511154175" green="0.76358228921890259" blue="0.27572911977767944" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -94,7 +94,7 @@
                             <constraint firstItem="2H8-6m-PvL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="giM-mk-0qZ"/>
                             <constraint firstItem="2H8-6m-PvL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="keK-GI-Eb5"/>
                             <constraint firstItem="gni-rX-hx1" firstAttribute="top" secondItem="2H8-6m-PvL" secondAttribute="bottom" constant="35" id="owX-kv-AOl"/>
-                            <constraint firstItem="miV-i5-DlF" firstAttribute="top" secondItem="U00-KM-iiK" secondAttribute="bottom" constant="12" id="y5L-iv-cLP"/>
+                            <constraint firstItem="miV-i5-DlF" firstAttribute="top" secondItem="rHD-05-OkS" secondAttribute="bottom" constant="35" id="y5L-iv-cLP"/>
                             <constraint firstItem="U00-KM-iiK" firstAttribute="height" secondItem="Ye6-IW-bwA" secondAttribute="height" id="ySC-lJ-xv4"/>
                             <constraint firstItem="U00-KM-iiK" firstAttribute="top" secondItem="2H8-6m-PvL" secondAttribute="bottom" constant="35" id="z4E-0N-uh4"/>
                         </constraints>

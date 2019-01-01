@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum ChallengeFace {
+    case dice
+    case number
+}
+
 class ViewController: UIViewController {
     
     // MARK: IB references
@@ -21,6 +26,8 @@ class ViewController: UIViewController {
     var summand1:Int = 0;
     var summand2:Int = 0;
     var sum:Int = 0;
+    // levels 1..4 have dice faces, levels 5..8 have number faces
+    var challengeFace:ChallengeFace = .dice;
     
     // MARK: level management
     // to proceed to next level, 15 challenges have to be done correctly
@@ -67,29 +74,30 @@ class ViewController: UIViewController {
         if(correctStreakCount == correctStreakSizeForLevelPump){
             ProgressHUD.showSuccess("You gain a level 🏅");
             correctStreakCount = 0;
-            currentLevel = min(2, currentLevel + 1);
+            currentLevel = min(8, currentLevel + 1);
         }
     }
     
     // challenge consists of two summands and a sum. The summands will be
     // displayed as dice faces, the sum has to be entered by the player in
-    // the text field
+    // the text field.
+    // lvl 1-4 have dice faces
+    // lvl 5-8 have number faces
+    // lvl 1-4 number range is 6, 7, 8, 9 respectively
+    // lvl 5-8 number range is 7, 7, 8, 9 respectively
     func createChallenge(){
-        if(currentLevel == 1){
-            summand1 = Int.random(in:1...6);
-            summand2 = Int.random(in:1...6);
-        } else if (currentLevel == 2){
-            summand1 = Int.random(in:1...9);
-            summand2 = Int.random(in:1...9);
-        }
+        print("Creating a challenge for level \(currentLevel) in the range of \(1...(5+currentLevel)).");
+        challengeFace = currentLevel < 5 ? .dice : .number;
+        summand1 = Int.random(in:1...(6+currentLevel%4));
+        summand2 = Int.random(in:1...(6+currentLevel%4));
         sum = summand1 + summand2;
     }
     
     // updates the dice views to represent the current challenge, and resets
     // the content of the text field
     func updateView(){
-        diceImageLeft.image = UIImage(named:"dice\(summand1)");
-        diceImageRight.image = UIImage(named:"dice\(summand2)");
+        diceImageLeft.image = UIImage(named:"\(challengeFace)\(summand1)");
+        diceImageRight.image = UIImage(named:"\(challengeFace)\(summand2)");
         answerTextfield.text = "";
         levelLabel.text = "Level \(currentLevel)";
         levelIcon.image = UIImage(named:"lvl\(currentLevel)");
