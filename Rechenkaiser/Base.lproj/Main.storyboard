@@ -61,18 +61,39 @@
                                     <action selector="confirmButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wQZ-33-Sj2"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lvl1" translatesAutoresizingMaskIntoConstraints="NO" id="gni-rX-hx1" userLabel="levelIcon">
+                                <rect key="frame" x="217" y="236" width="144" height="217"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="217" id="1Pg-I7-e6g"/>
+                                    <constraint firstAttribute="width" constant="144" id="JCc-MW-PoC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6M-zN-W2f">
+                                <rect key="frame" x="17" y="401" width="171" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="rl5-fz-Pu0"/>
+                                    <constraint firstAttribute="width" constant="171" id="tGl-J6-Gdp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="34"/>
+                                <color key="textColor" red="0.96033066511154175" green="0.76358228921890259" blue="0.27572911977767944" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.88513809442520142" green="0.42010343074798584" blue="0.23255288600921631" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="rHD-05-OkS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="A2Y-Xe-cSB"/>
+                            <constraint firstItem="T6M-zN-W2f" firstAttribute="top" secondItem="miV-i5-DlF" secondAttribute="bottom" constant="13" id="Ag7-de-Ukh"/>
                             <constraint firstItem="U00-KM-iiK" firstAttribute="leading" secondItem="Ye6-IW-bwA" secondAttribute="trailing" constant="20" id="FZz-LA-pQr"/>
+                            <constraint firstItem="T6M-zN-W2f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="FsK-Wx-MaZ"/>
                             <constraint firstItem="U00-KM-iiK" firstAttribute="width" secondItem="Ye6-IW-bwA" secondAttribute="width" id="J6J-vN-iIR"/>
                             <constraint firstItem="rHD-05-OkS" firstAttribute="top" secondItem="Ye6-IW-bwA" secondAttribute="bottom" constant="19" id="JsA-Bd-nTY"/>
                             <constraint firstItem="miV-i5-DlF" firstAttribute="leading" secondItem="rHD-05-OkS" secondAttribute="trailing" constant="10" id="QSy-9u-4BR"/>
                             <constraint firstItem="Ye6-IW-bwA" firstAttribute="top" secondItem="2H8-6m-PvL" secondAttribute="bottom" constant="35" id="aEw-Wl-a40"/>
                             <constraint firstItem="Ye6-IW-bwA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="c3h-k3-TUS"/>
+                            <constraint firstItem="gni-rX-hx1" firstAttribute="leading" secondItem="U00-KM-iiK" secondAttribute="trailing" constant="20" id="dEN-8y-WOK"/>
                             <constraint firstItem="2H8-6m-PvL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="giM-mk-0qZ"/>
                             <constraint firstItem="2H8-6m-PvL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="keK-GI-Eb5"/>
+                            <constraint firstItem="gni-rX-hx1" firstAttribute="top" secondItem="2H8-6m-PvL" secondAttribute="bottom" constant="35" id="owX-kv-AOl"/>
                             <constraint firstItem="miV-i5-DlF" firstAttribute="top" secondItem="U00-KM-iiK" secondAttribute="bottom" constant="12" id="y5L-iv-cLP"/>
                             <constraint firstItem="U00-KM-iiK" firstAttribute="height" secondItem="Ye6-IW-bwA" secondAttribute="height" id="ySC-lJ-xv4"/>
                             <constraint firstItem="U00-KM-iiK" firstAttribute="top" secondItem="2H8-6m-PvL" secondAttribute="bottom" constant="35" id="z4E-0N-uh4"/>
@@ -83,6 +104,8 @@
                         <outlet property="answerTextfield" destination="rHD-05-OkS" id="kEj-Yj-Hag"/>
                         <outlet property="diceImageLeft" destination="Ye6-IW-bwA" id="nFd-ns-xWh"/>
                         <outlet property="diceImageRight" destination="U00-KM-iiK" id="cEA-vN-QmS"/>
+                        <outlet property="levelIcon" destination="gni-rX-hx1" id="59z-NA-kou"/>
+                        <outlet property="levelLabel" destination="T6M-zN-W2f" id="70Z-Y3-iga"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -94,5 +117,6 @@
         <image name="dice1" width="100" height="100"/>
         <image name="dice6" width="100" height="100"/>
         <image name="largeBanner" width="262.5" height="105"/>
+        <image name="lvl1" width="48" height="60.720001220703125"/>
     </resources>
 </document>
