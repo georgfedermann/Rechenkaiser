@@ -56,12 +56,14 @@ class ViewController: UIViewController {
         if let playerAnswerString = answerTextfield.text,
             let playerAnswer = Int(playerAnswerString),
             playerAnswer == sum {
+            SoundManager.playSound(.correct);
             ProgressHUD.showSuccess(motivationLibrary.getRandomQuoteForCorrectAnswer());
             correctStreakCount += 1;
             checkLevelClimb();
             createChallenge();
             updateView();
         } else {
+            SoundManager.playSound(.wrong);
             ProgressHUD.showError(motivationLibrary.getRandomQuoteForIncorrectAnswer());
             ProgressHUD.showError("You lose a level 😖");
             correctStreakCount = 0;

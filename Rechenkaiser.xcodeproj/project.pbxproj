@@ -15,6 +15,9 @@
 		560A811521D9232E00CC99CB /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 560A811221D9232E00CC99CB /* ProgressHUD.bundle */; };
 		560A811621D9232E00CC99CB /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 560A811421D9232E00CC99CB /* ProgressHUD.m */; };
 		560A811921D956A700CC99CB /* MotivationLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560A811821D956A700CC99CB /* MotivationLibrary.swift */; };
+		564B225721E2179800E29CB4 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B225621E2179800E29CB4 /* SoundManager.swift */; };
+		564B225B21E21A3500E29CB4 /* dingcorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 564B225921E21A3400E29CB4 /* dingcorrect.wav */; };
+		564B225C21E21A3500E29CB4 /* dingwrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 564B225A21E21A3500E29CB4 /* dingwrong.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		560A811421D9232E00CC99CB /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 		560A811721D9234600CC99CB /* Rechenkaiser-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rechenkaiser-Bridging-Header.h"; sourceTree = "<group>"; };
 		560A811821D956A700CC99CB /* MotivationLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationLibrary.swift; sourceTree = "<group>"; };
+		564B225621E2179800E29CB4 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		564B225921E21A3400E29CB4 /* dingcorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingcorrect.wav; sourceTree = "<group>"; };
+		564B225A21E21A3500E29CB4 /* dingwrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingwrong.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		560A80FA21D90C5E00CC99CB /* Rechenkaiser */ = {
 			isa = PBXGroup;
 			children = (
+				564B225821E219F400E29CB4 /* sounds */,
 				560A810D21D910AD00CC99CB /* Model */,
 				560A810E21D910B600CC99CB /* View */,
 				560A810F21D910BD00CC99CB /* Controller */,
@@ -94,6 +101,7 @@
 			children = (
 				560A80FB21D90C5E00CC99CB /* AppDelegate.swift */,
 				560A80FD21D90C5E00CC99CB /* ViewController.swift */,
+				564B225621E2179800E29CB4 /* SoundManager.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -107,6 +115,15 @@
 				560A811721D9234600CC99CB /* Rechenkaiser-Bridging-Header.h */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		564B225821E219F400E29CB4 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				564B225921E21A3400E29CB4 /* dingcorrect.wav */,
+				564B225A21E21A3500E29CB4 /* dingwrong.wav */,
+			);
+			path = sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +186,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				560A811521D9232E00CC99CB /* ProgressHUD.bundle in Resources */,
+				564B225B21E21A3500E29CB4 /* dingcorrect.wav in Resources */,
+				564B225C21E21A3500E29CB4 /* dingwrong.wav in Resources */,
 				560A810621D90C6000CC99CB /* LaunchScreen.storyboard in Resources */,
 				560A810321D90C6000CC99CB /* Assets.xcassets in Resources */,
 				560A810121D90C5E00CC99CB /* Main.storyboard in Resources */,
@@ -186,6 +205,7 @@
 				560A80FE21D90C5E00CC99CB /* ViewController.swift in Sources */,
 				560A80FC21D90C5E00CC99CB /* AppDelegate.swift in Sources */,
 				560A811921D956A700CC99CB /* MotivationLibrary.swift in Sources */,
+				564B225721E2179800E29CB4 /* SoundManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
