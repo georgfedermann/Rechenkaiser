@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ConfigurationViewDelegate {
-    func playerConfiguredGame(gameModel:GameModel)
+    func playerConfiguredGame()
 }
 
 class ConfigurationViewController: UIViewController {
@@ -28,6 +28,15 @@ class ConfigurationViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        let gameController:GameViewController = delegate as! GameViewController;
+        let gameModel:GameModel = gameController.gameModel;
+        
+        numberRangeUpperLimitTextfield.text = String(gameModel.numberRangeUpperLimit)
+        negativeNumbersAllowedSwitch.isOn = gameModel.negativeNumbersAllowed
+        createDiceChallengesSwitch.isOn = gameModel.createDiceChallenges
+        createNumberChallengesSwitch.isOn = gameModel.createNumberChallenges
+        allowAdditionsSwitch.isOn = gameModel.createAdditionChallenges
+        allowSubtractionsSwitch.isOn = gameModel.createSubtractionChallenges
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
@@ -45,7 +54,13 @@ class ConfigurationViewController: UIViewController {
         gameModel.createNumberChallenges = createNumberChallengesSwitch.isOn
         gameModel.createAdditionChallenges = allowAdditionsSwitch.isOn
         gameModel.createSubtractionChallenges = allowSubtractionsSwitch.isOn
-        delegate.playerConfiguredGame(gameModel: GameModel())
+        // debug log config model
+        let jsonEncoder = JSONEncoder()
+        let jsonData = try! jsonEncoder.encode(gameModel)
+        let debugTxt = String(data:jsonData, encoding:.utf8)!
+        print("Received gameModel \(debugTxt).")
+        // inform delegate that game configuration might have changed
+        delegate.playerConfiguredGame();
         // close configuration dialog
         self.dismiss(animated:true, completion:nil);
     }

@@ -21,9 +21,8 @@ class GameViewController: UIViewController, ConfigurationViewDelegate {
     }
     
     // callback method for configuration view controller
-    func playerConfiguredGame(gameModel: GameModel) {
-        print("Received gameModel \(gameModel).")
-        //self.gameModel = gameModel;
+    func playerConfiguredGame() {
+        // how to respond to game config changes?
     }
     
 

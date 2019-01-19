@@ -10,7 +10,7 @@ import Foundation
 
 // GameModel contains configuration items that controls the inner workings of
 // the game.
-class GameModel {
+class GameModel:Codable {
    
     // Defines the number range of the challenges.
     // Numbers occuring in the game should not exceed this range.
