@@ -21,7 +21,7 @@ class Challenge {
     var result:Int
     var challengeOperator:ChallengeOperator
     
-    init(operand1 op1:Int, operand2 op2:Int, result resultArg:Int, challengeOperatore op:ChallengeOperator){
+    init(operand1 op1:Int, operand2 op2:Int, result resultArg:Int, challengeOperator op:ChallengeOperator){
         operand1 = op1
         operand2 = op2
         result = resultArg

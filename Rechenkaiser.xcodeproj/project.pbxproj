@@ -19,6 +19,7 @@
 		56466BF321F398F0007812CC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56466BF221F398F0007812CC /* GameViewController.swift */; };
 		56466BF521F399D6007812CC /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56466BF421F399D6007812CC /* GameModel.swift */; };
 		56466BF921F3A496007812CC /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56466BF821F3A496007812CC /* Challenge.swift */; };
+		56466BFB21F3EA6E007812CC /* ChallengeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56466BFA21F3EA6E007812CC /* ChallengeGenerator.swift */; };
 		564B225721E2179800E29CB4 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564B225621E2179800E29CB4 /* SoundManager.swift */; };
 		564B225B21E21A3500E29CB4 /* dingcorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 564B225921E21A3400E29CB4 /* dingcorrect.wav */; };
 		564B225C21E21A3500E29CB4 /* dingwrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 564B225A21E21A3500E29CB4 /* dingwrong.wav */; };
@@ -41,6 +42,7 @@
 		56466BF221F398F0007812CC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		56466BF421F399D6007812CC /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		56466BF821F3A496007812CC /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		56466BFA21F3EA6E007812CC /* ChallengeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeGenerator.swift; sourceTree = "<group>"; };
 		564B225621E2179800E29CB4 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		564B225921E21A3400E29CB4 /* dingcorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingcorrect.wav; sourceTree = "<group>"; };
 		564B225A21E21A3500E29CB4 /* dingwrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingwrong.wav; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				560A811821D956A700CC99CB /* MotivationLibrary.swift */,
 				56466BF421F399D6007812CC /* GameModel.swift */,
 				56466BF821F3A496007812CC /* Challenge.swift */,
+				56466BFA21F3EA6E007812CC /* ChallengeGenerator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				560A811921D956A700CC99CB /* MotivationLibrary.swift in Sources */,
 				56466BF521F399D6007812CC /* GameModel.swift in Sources */,
 				564B225721E2179800E29CB4 /* SoundManager.swift in Sources */,
+				56466BFB21F3EA6E007812CC /* ChallengeGenerator.swift in Sources */,
 				56466BF121F398AD007812CC /* ConfigurationViewController.swift in Sources */,
 				56466BF921F3A496007812CC /* Challenge.swift in Sources */,
 			);
