@@ -178,7 +178,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gI3-cx-TzY">
-                                <rect key="frame" x="50" y="288.66666666666669" width="275" height="235.00000000000006"/>
+                                <rect key="frame" x="50" y="119" width="275" height="235"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dqq-n0-Zc5">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
@@ -297,8 +297,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.88627450980392153" green="0.41960784313725491" blue="0.23137254901960785" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="gI3-cx-TzY" firstAttribute="centerY" secondItem="lmC-X9-iqN" secondAttribute="centerY" id="0su-T6-xGh"/>
                             <constraint firstItem="vyJ-tO-9Kh" firstAttribute="top" secondItem="exH-vU-Aqf" secondAttribute="top" constant="15" id="8OX-xZ-zb3"/>
+                            <constraint firstItem="gI3-cx-TzY" firstAttribute="top" secondItem="exH-vU-Aqf" secondAttribute="top" constant="75" id="Hbf-md-mc1"/>
                             <constraint firstItem="vyJ-tO-9Kh" firstAttribute="leading" secondItem="exH-vU-Aqf" secondAttribute="leading" constant="15" id="IBB-8m-DCP"/>
                             <constraint firstItem="gI3-cx-TzY" firstAttribute="centerX" secondItem="lmC-X9-iqN" secondAttribute="centerX" id="hu0-H2-BwZ"/>
                         </constraints>
