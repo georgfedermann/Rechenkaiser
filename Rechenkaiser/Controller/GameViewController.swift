@@ -8,7 +8,11 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, ConfigurationViewDelegate {
+    
+    // MARK: game logic state
+    var gameModel:GameModel = GameModel()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,15 +20,23 @@ class GameViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // callback method for configuration view controller
+    func playerConfiguredGame(gameModel: GameModel) {
+        print("Received gameModel \(gameModel).")
+        //self.gameModel = gameModel;
     }
-    */
+    
 
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if segue.identifier == "configSegue" {
+            let configViewController:ConfigurationViewController = segue.destination as! ConfigurationViewController;
+            configViewController.delegate = self;
+        }
+    }
+    
+    @IBAction func configButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier:"configSegue", sender:self);
+    }
+    
 }

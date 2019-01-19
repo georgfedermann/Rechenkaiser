@@ -36,6 +36,6 @@ class GameModel {
     var createAdditionChallenges:Bool = true;
     
     // shall the system create subtraction challenges
-    var createSubractionChallenges:Bool = true;
+    var createSubtractionChallenges:Bool = true;
     
 }
