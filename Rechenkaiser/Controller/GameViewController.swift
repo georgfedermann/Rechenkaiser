@@ -47,6 +47,12 @@ class GameViewController: UIViewController, ConfigurationViewDelegate {
         if gameModel.createSubtractionChallenges {
             challengeGenerators += [SubtractionChallengeGenerator()]
         }
+        if gameModel.createMultiplicationChallenges {
+            ProgressHUD.showError(status:"Multiplication mode not supported yet",interaction:true)
+        }
+        if gameModel.createDivisionChallenges {
+            ProgressHUD.showError(status:"Division mode not supported yet", interaction:true)
+        }
     }
     
     // MARK: event handling
@@ -65,10 +71,10 @@ class GameViewController: UIViewController, ConfigurationViewDelegate {
     // MARK: view controller - overriding methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
         updateGameConfiguration()
         createChallenge()
         updateView()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool){
