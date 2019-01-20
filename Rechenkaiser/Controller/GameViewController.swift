@@ -29,12 +29,14 @@ class GameViewController: UIViewController, ConfigurationViewDelegate {
     // MARK: game logic
     func updateView() {
         progressBar.frame.size.width = view.frame.size.width / CGFloat(gameModel.winningScore) * CGFloat(currentScore)
+        
     }
     
     func createChallenge() {
         let challengeGenerator:ChallengeGenerator =
-        challengeGenerators[Int.random(in:0..<challengeGenerators.count)]
+            challengeGenerators[Int.random(in:0..<challengeGenerators.count)]
         currentChallenge = challengeGenerator.generateChallenge(gameModel:gameModel)
+        print(currentChallenge.toJsonString())
     }
     
     // callback method for configuration view controller
