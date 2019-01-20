@@ -21,6 +21,13 @@ class GameModel:Codable {
     // specified.
     var numberRangeUpperLimit:Int = 20;
     
+    // Score necessary to win the game and become Rechenkaiser.
+    // For each correctly answered challenge the player scores 1 point.
+    var winningScore = 120;
+    
+    // Penalty for failing a challenge
+    var penalty = 15;
+    
     // Define whether negative numbers are allowed.
     // If negative numbers are allowed then the number range effectively
     // goes from -upperLimit to upperLimit.
@@ -37,5 +44,11 @@ class GameModel:Codable {
     
     // shall the system create subtraction challenges
     var createSubtractionChallenges:Bool = true;
+    
+    // shall the system create multiplication challenges
+    var createMultiplicationChallenges:Bool = false;
+
+    // shall the system create division challenges
+    var createDivisionChallenges:Bool = false;
     
 }
