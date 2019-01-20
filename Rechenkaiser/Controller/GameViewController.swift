@@ -48,10 +48,10 @@ class GameViewController: UIViewController, ConfigurationViewDelegate {
             challengeGenerators += [SubtractionChallengeGenerator()]
         }
         if gameModel.createMultiplicationChallenges {
-            ProgressHUD.showError(status:"Multiplication mode not supported yet",interaction:true)
+            ProgressHUD.showError("Multiplication mode not supported yet",interaction:true)
         }
         if gameModel.createDivisionChallenges {
-            ProgressHUD.showError(status:"Division mode not supported yet", interaction:true)
+            ProgressHUD.showError("Division mode not supported yet", interaction:true)
         }
     }
     
