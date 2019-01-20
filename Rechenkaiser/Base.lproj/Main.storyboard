@@ -178,11 +178,11 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Bxh-56-Y1n">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Bxh-56-Y1n">
                                         <rect key="frame" x="0.0" y="159" width="205" height="52"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q37-WQ-j7i">
-                                                <rect key="frame" x="0.0" y="0.0" width="69" height="52"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="61.333333333333336" height="52"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                                 <state key="normal" title="✅"/>
                                                 <connections>
@@ -190,9 +190,8 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbb-64-WaE">
-                                                <rect key="frame" x="77" y="0.0" width="128" height="52"/>
+                                                <rect key="frame" x="69.333333333333329" y="0.0" width="135.66666666666669" height="52"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="128" id="IVA-EF-vX8"/>
                                                     <constraint firstAttribute="height" constant="52" id="Ubf-wp-3hu"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="34"/>
