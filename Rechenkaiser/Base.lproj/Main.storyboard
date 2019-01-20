@@ -133,8 +133,11 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvc-DS-jcZ" userLabel="progressBar">
-                                <rect key="frame" x="16" y="448" width="0.0" height="0.0"/>
+                                <rect key="frame" x="16" y="448" width="0.0" height="14"/>
                                 <color key="backgroundColor" red="0.55877143144607544" green="0.16086530685424805" blue="0.1478056013584137" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="4iz-06-uDX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -186,6 +189,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                                 <state key="normal" title="✅"/>
                                                 <connections>
+                                                    <action selector="confirmButtonPressed:" destination="gxw-0J-r6f" eventType="touchUpInside" id="5HO-ng-qfP"/>
                                                     <action selector="confirmButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCD-Qg-FHN"/>
                                                 </connections>
                                             </button>
@@ -218,6 +222,8 @@
                     </view>
                     <connections>
                         <outlet property="answerTextfield" destination="1Kv-UZ-QS1" id="rom-oa-Ii1"/>
+                        <outlet property="levelIcon" destination="mDN-G6-U3r" id="OJR-mq-vVR"/>
+                        <outlet property="levelLabel" destination="Pbb-64-WaE" id="zBf-D8-2qH"/>
                         <outlet property="operandImageLeft" destination="Xo6-dz-GH2" id="1BM-YO-PSJ"/>
                         <outlet property="operandImageRight" destination="Ye6-IW-bwA" id="eeG-Pu-una"/>
                         <outlet property="operatorLabel" destination="RM5-xd-w5C" id="VyF-Rc-FhL"/>

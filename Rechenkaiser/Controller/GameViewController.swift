@@ -16,9 +16,12 @@ class GameViewController: UIViewController, ConfigurationViewDelegate {
     @IBOutlet weak var operatorLabel: UILabel!
     @IBOutlet weak var progressBar: UILabel!
     @IBOutlet weak var answerTextfield: UITextField!
+    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var levelIcon: UIImageView!
     
     // MARK: game logic state
-    var gameModel:GameModel = GameModel()
+    let gameModel:GameModel = GameModel()
+    let motivationLibrary:MotivationLibrary = MotivationLibrary()
     // a collection of strategies that can create challenges.
     // the content of the collection gets updated when the user configures the game
     var challengeGenerators:[ChallengeGenerator] = [ChallengeGenerator]()
@@ -28,8 +31,19 @@ class GameViewController: UIViewController, ConfigurationViewDelegate {
     
     // MARK: game logic
     func updateView() {
-        progressBar.frame.size.width = view.frame.size.width / CGFloat(gameModel.winningScore) * CGFloat(currentScore)
+        let progressBarLength = view.frame.size.width / CGFloat(gameModel.winningScore) * CGFloat(currentScore)
+        progressBar.frame.size.width = progressBarLength
+        operandImageLeft.image = UIImage(named:"\(currentChallenge.challengeVisual)\(currentChallenge.operand1)")
+        operandImageRight.image = UIImage(named:"\(currentChallenge.challengeVisual)\(currentChallenge.operand2)")
+        operatorLabel.text = currentChallenge.challengeOperator.rawValue
         
+        let currentLevel:Int = Int(8.0 / Double(gameModel.winningScore) * Double(currentScore)) + 1
+        levelLabel.text = "Level \(currentLevel)"
+        levelIcon.image = UIImage(named:"lvl\(currentLevel)")
+        
+        answerTextfield.text = ""
+        
+        print("Status: currentScore:\(currentScore), barLength:\(progressBarLength), currentLevel:\(currentLevel)")
     }
     
     func createChallenge() {
@@ -58,6 +72,25 @@ class GameViewController: UIViewController, ConfigurationViewDelegate {
     }
     
     // MARK: event handling
+    @IBAction func confirmButtonPressed(_ sender: UIButton) {
+        if let playerAnswerString = answerTextfield.text,
+        let playerAnswer = Int(playerAnswerString),
+            playerAnswer == currentChallenge.result {
+            // success
+            currentScore += 1
+            SoundManager.playSound(.correct)
+            ProgressHUD.showSuccess(motivationLibrary.getRandomQuoteForCorrectAnswer())
+            createChallenge()
+            updateView()
+        } else {
+            // failure
+            currentScore = max(0, currentScore - gameModel.penalty)
+            SoundManager.playSound(.wrong)
+            ProgressHUD.showError(motivationLibrary.getRandomQuoteForIncorrectAnswer())
+            updateView()
+        }
+    }
+    
     @IBAction func configButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier:"configSegue", sender:self);
     }

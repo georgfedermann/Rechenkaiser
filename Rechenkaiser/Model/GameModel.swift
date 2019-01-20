@@ -26,7 +26,7 @@ class GameModel:Codable {
     var winningScore = 120;
     
     // Penalty for failing a challenge
-    var penalty = 15;
+    var penalty = 5;
     
     // Define whether negative numbers are allowed.
     // If negative numbers are allowed then the number range effectively
