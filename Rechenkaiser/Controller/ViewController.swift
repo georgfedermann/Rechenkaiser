@@ -86,7 +86,7 @@ class ViewController: UIViewController {
     // lvl 1-4 have dice faces
     // lvl 5-8 have number faces
     // lvl 1-4 number range is 6, 7, 8, 9 respectively
-    // lvl 5-8 number range is 7, 7, 8, 9 respectively
+    // lvl 5-8 number range is 6, 7, 8, 9 respectively
     func createChallenge(){
         // define the range of numbers from which summands in this level can be taken.
         let validRangeForLevel:ClosedRange<Int> = 1...(6+(currentLevel-1)%4);
