@@ -217,6 +217,7 @@
                         <viewLayoutGuide key="safeArea" id="hYc-RJ-k4b"/>
                     </view>
                     <connections>
+                        <outlet property="answerTextfield" destination="1Kv-UZ-QS1" id="rom-oa-Ii1"/>
                         <outlet property="operandImageLeft" destination="Xo6-dz-GH2" id="1BM-YO-PSJ"/>
                         <outlet property="operandImageRight" destination="Ye6-IW-bwA" id="eeG-Pu-una"/>
                         <outlet property="operatorLabel" destination="RM5-xd-w5C" id="VyF-Rc-FhL"/>
@@ -446,7 +447,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWg-9F-S6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1804" y="-506"/>
+            <point key="canvasLocation" x="1759" y="-506"/>
         </scene>
     </scenes>
     <resources>

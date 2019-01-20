@@ -19,7 +19,7 @@ class GameModel:Codable {
     // number range.
     // The range will normally start with 0, thus only the upper gets
     // specified.
-    var numberRangeUpperLimit:Int = 20;
+    var numberRangeUpperLimit:Int = 10;
     
     // Score necessary to win the game and become Rechenkaiser.
     // For each correctly answered challenge the player scores 1 point.
@@ -50,5 +50,9 @@ class GameModel:Codable {
 
     // shall the system create division challenges
     var createDivisionChallenges:Bool = false;
-    
+
+    func isDiceFaceAvailableForNumber(_ number:Int)->Bool {
+        return 1 <= number && number <= 9
+    }
+
 }

@@ -15,12 +15,14 @@ class GameViewController: UIViewController, ConfigurationViewDelegate {
     @IBOutlet weak var operandImageRight: UIImageView!
     @IBOutlet weak var operatorLabel: UILabel!
     @IBOutlet weak var progressBar: UILabel!
+    @IBOutlet weak var answerTextfield: UITextField!
     
     // MARK: game logic state
     var gameModel:GameModel = GameModel()
     // a collection of strategies that can create challenges.
     // the content of the collection gets updated when the user configures the game
     var challengeGenerators:[ChallengeGenerator] = [ChallengeGenerator]()
+    var currentChallenge:Challenge!
     
     var currentScore:Int = 0
     
@@ -29,9 +31,22 @@ class GameViewController: UIViewController, ConfigurationViewDelegate {
         progressBar.frame.size.width = view.frame.size.width / CGFloat(gameModel.winningScore) * CGFloat(currentScore)
     }
     
+    func createChallenge() {
+        let challengeGenerator:ChallengeGenerator =
+        challengeGenerators[Int.random(in:0..<challengeGenerators.count)]
+        currentChallenge = challengeGenerator.generateChallenge(gameModel:gameModel)
+    }
+    
     // callback method for configuration view controller
     func updateGameConfiguration() {
         // how to respond to game config changes?
+        challengeGenerators = [ChallengeGenerator]()
+        if gameModel.createAdditionChallenges {
+            challengeGenerators += [AdditionChallengeGenerator()]
+        }
+        if gameModel.createSubtractionChallenges {
+            challengeGenerators += [SubtractionChallengeGenerator()]
+        }
     }
     
     // MARK: event handling
@@ -51,8 +66,14 @@ class GameViewController: UIViewController, ConfigurationViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateGameConfiguration()
+        createChallenge()
+        updateView()
         // Do any additional setup after loading the view.
     }
     
-    
+    override func viewWillAppear(_ animated: Bool){
+        super.viewWillAppear(animated)
+        answerTextfield.becomeFirstResponder()
+        answerTextfield.text = ""
+    }
 }

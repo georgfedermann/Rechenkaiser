@@ -11,6 +11,8 @@ import Foundation
 enum ChallengeOperator:String {
     case plus = "+"
     case minus = "-"
+    case times = "•"
+    case divide = "÷"
 }
 
 // Represents a challenge that gets presented to the player. 
