@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ConfigurationViewDelegate {
-    func playerConfiguredGame()
+    func updateGameConfiguration()
 }
 
 class ConfigurationViewController: UIViewController {
@@ -76,7 +76,7 @@ class ConfigurationViewController: UIViewController {
         let debugTxt = String(data:jsonData, encoding:.utf8)!
         print("Received gameModel \(debugTxt).")
         // inform delegate that game configuration might have changed
-        delegate.playerConfiguredGame();
+        delegate.updateGameConfiguration();
         // close configuration dialog
         self.dismiss(animated:true, completion:nil);
     }
