@@ -47,6 +47,27 @@ class ConfigurationViewController: UIViewController {
         allowDivisionsSwitch.isOn = gameModel.createDivisionChallenges
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        checkPin()
+    }
+    
+    func checkPin() {
+        print("checkPin")
+        let alertController = UIAlertController(title: "Code", message: nil, preferredStyle: .alert)
+        alertController.addTextField()
+        let submitAction = UIAlertAction(title:"Submit", style: .default){
+            [unowned alertController] _ in
+            if let answer:String = alertController.textFields![0].text,
+                answer == "2012" {
+                
+            } else {
+                self.dismiss(animated:true, completion:nil)
+            }
+        }
+        alertController.addAction(submitAction)
+        present(alertController, animated:true, completion:nil)
+    }
+    
     @IBAction func backButtonPressed(_ sender: UIButton) {
         guard let delegate = delegate,
             let numberRangeUpperLimitString:String = numberRangeUpperLimitTextfield.text,
