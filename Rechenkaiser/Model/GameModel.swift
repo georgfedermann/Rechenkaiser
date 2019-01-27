@@ -19,7 +19,7 @@ class GameModel:Codable {
     // number range.
     // The range will normally start with 0, thus only the upper gets
     // specified.
-    var numberRangeUpperLimit:Int = 10;
+    var numberRangeUpperLimit:Int = 16;
     
     // Score necessary to win the game and become Rechenkaiser.
     // For each correctly answered challenge the player scores 1 point.
