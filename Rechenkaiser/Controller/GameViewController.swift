@@ -63,6 +63,10 @@ class GameViewController: UIViewController, ConfigurationViewDelegate {
         if gameModel.createSubtractionChallenges {
             challengeGenerators += [SubtractionChallengeGenerator()]
         }
+        if !(gameModel.createDiceChallenges || gameModel.createNumberChallenges){
+            ProgressHUD.showError("At least one option of diceface or numberface needs to be enabled",interaction:true)
+            gameModel.createNumberChallenges = true
+        }
         if gameModel.createMultiplicationChallenges {
             ProgressHUD.showError("Multiplication mode not supported yet",interaction:true)
         }

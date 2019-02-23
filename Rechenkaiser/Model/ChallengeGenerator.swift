@@ -13,12 +13,12 @@ protocol ChallengeGenerator {
 }
 
 extension ChallengeGenerator {
-    func decideOnVisualPresentation(gameModel:GameModel)->ChallengeVisual {
+    func decideOnVisualPresentation(gameModel:GameModel,maxOperand:Int)->ChallengeVisual {
         var options:[ChallengeVisual] = [ChallengeVisual]()
-        if gameModel.createDiceChallenges {
+        if gameModel.createDiceChallenges && maxOperand <= 16 {
             options += [.dice]
         }
-        if gameModel.createNumberChallenges {
+        if gameModel.createNumberChallenges || maxOperand > 16 {
             options += [.number]
         }
         assert(options.count > 0)
@@ -38,7 +38,7 @@ class AdditionChallengeGenerator:ChallengeGenerator {
                          operand2:operand2,
                          result:sum,
                          challengeOperator: .plus,
-                         visualization: decideOnVisualPresentation(gameModel: gameModel));
+                         visualization: decideOnVisualPresentation(gameModel: gameModel,maxOperand:max(operand1, operand2)));
     }
 }
 
@@ -59,6 +59,6 @@ class SubtractionChallengeGenerator:ChallengeGenerator {
                          operand2:operand2,
                          result:result,
                          challengeOperator: .minus,
-                         visualization: decideOnVisualPresentation(gameModel: gameModel));
+                         visualization: decideOnVisualPresentation(gameModel: gameModel,maxOperand:max(operand1, operand2)));
     }
 }

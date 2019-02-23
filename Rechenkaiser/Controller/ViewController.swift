@@ -5,6 +5,8 @@
 //  Created by Georg Federmann on 30.12.18.
 //  Copyright © 2018 Poorman's Castle. All rights reserved.
 //
+// this obsolete type has been replaced by GameViewController.swift
+// and only remains here until salvaging has been finished.
 
 import UIKit
 
